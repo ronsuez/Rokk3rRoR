@@ -33,7 +33,6 @@ class StoreController < ApplicationController
             if(!found)
               match = brand.name.downcase.scan(/#{query.downcase}/)
               if (match.any?)
-                puts match.to_s
                 result << ("<b>" + query + "</b>").html_safe
                 matches = true
                 found = true

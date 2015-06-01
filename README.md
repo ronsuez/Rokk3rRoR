@@ -1,7 +1,7 @@
 # Rokk3rRoR
 Rokk3rTest written on RoR
 
-# Search Function
+## Search Function
 
 
     def search
@@ -32,7 +32,6 @@ Rokk3rTest written on RoR
                 if(!found)
                   match = brand.name.downcase.scan(/#{query.downcase}/)
                   if (match.any?)
-                    puts match.to_s
                     result << ("<b>" + query + "</b>").html_safe
                     matches = true
                     found = true
