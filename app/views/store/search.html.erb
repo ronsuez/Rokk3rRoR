@@ -1,0 +1,24 @@
+<h1>Store#search</h1>
+<p>Find me in app/views/store/search.html.erb</p>
+<p>Search Term: <%= @query %></p>
+
+
+
+<h1>Listing Results</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @results.each do |result| %>
+      <tr>
+        <td><%= result %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
