@@ -7,20 +7,14 @@ class StoreController < ApplicationController
 
   def search
      @query = params[:q]
-     
-
      @query_strings = params[:q].scan(/\w+/)
 
      result = []
-
-     puts @query_strings
-
      clothing_types = ClothingType.all
      brands = Brand.all
 
      @query_strings.each do |query|
         matches = false
-
         found = false
         clothing_types.each do  |clothing_type|
 
@@ -50,9 +44,8 @@ class StoreController < ApplicationController
       if(!matches)
         result << query
       end
-       
+
      end
      @results = result
-
   end
 end
