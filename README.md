@@ -48,6 +48,6 @@ https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql
     end
     
 ## Snapshots
-    ![home page](https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/home.png)
+    ![home](https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/home.png)
     
-    ![search page](https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/search.png)
+    ![search](https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/search.png)
