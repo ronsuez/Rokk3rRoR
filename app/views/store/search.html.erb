@@ -1,8 +1,13 @@
-<h1>Store#search</h1>
+<h3>Store#search</h3>
 <p>Search Term: <%= @query %></p>
 
-<h1>Listing Results</h1>
+<h3>Listing Results</h3>
 
   <% @results.each do |result| %>
         <%= result %>
   <% end %>
+
+<br/>
+<br/>
+<br/>
+<%= link_to 'Home', "/" %>
