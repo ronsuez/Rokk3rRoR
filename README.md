@@ -48,11 +48,9 @@ https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql
     end
     
 ## Snapshots
-    ![home]
-    (https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/home.png)
+![home]
+(https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/home.png)
     
-    ![search]
-    (https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/search.png)
+![search]
+(https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/search.png)
     
-    ![Image of Yaktocat]
-    (https://octodex.github.com/images/yaktocat.png)
