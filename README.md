@@ -2,7 +2,7 @@
 Rokk3rTest written on RoR
 
 ## Database
-(https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql)
+https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql
 ## Search Function
     def search
          @query = params[:q]
@@ -46,3 +46,8 @@ Rokk3rTest written on RoR
          end
          @results = result
     end
+    
+## Snapshots
+    ![home page](https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/home.png)
+    
+    ![search page](https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/search.png)
