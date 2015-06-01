@@ -19,30 +19,38 @@ class StoreController < ApplicationController
      brands = Brand.all
 
      @query_strings.each do |query|
-        flag = false
+        matches = false
 
+        found = false
         clothing_types.each do  |clothing_type|
-          match = clothing_type.name.scan(/#{query}/)
-          if (match.any?)
-            puts match.to_s
-            result << ("<i>" + query + "</i>").html_safe
-            flag = true
+
+          if(!found)
+            match = clothing_type.name.downcase.scan(/#{query.downcase}/)
+            if (match.any?)
+              result << ("<i>" + query + "</i>").html_safe
+              matches = true
+              found = true
+            end
           end
         end
 
-       brands.each do |brand|
-            match = brand.name.scan(/#{query}/)
-            if (match.any?)
-              puts match.to_s
-              result << ("<b>" + query + "</b>").html_safe
-              flag = true
-           end
+        found = false
+        brands.each do |brand|
+            if(!found)
+              match = brand.name.downcase.scan(/#{query.downcase}/)
+              if (match.any?)
+                puts match.to_s
+                result << ("<b>" + query + "</b>").html_safe
+                matches = true
+                found = true
+              end
+            end
        end
 
-      if(!flag)
+      if(!matches)
         result << query
       end
-       puts '------'
+       
      end
      @results = result
 
