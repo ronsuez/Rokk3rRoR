@@ -1,9 +1,9 @@
 # Rokk3rRoR
 Rokk3rTest written on RoR
 
+## Database
+(https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql)
 ## Search Function
-
-
     def search
          @query = params[:q]
          @query_strings = params[:q].scan(/\w+/)
