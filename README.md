@@ -54,7 +54,7 @@ https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql
     
 ## Snapshots
 ![home]
-(https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/home.png)
+(https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/home_2.png)
     
 ![search]
 (https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/snapshots/search_2.png)
