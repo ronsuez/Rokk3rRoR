@@ -9,6 +9,7 @@ https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql
          @query_strings = params[:q].scan(/\w+/)
 
          result = []
+         results_search = []
          clothing_types = ClothingType.all
          brands = Brand.all
 
@@ -21,6 +22,7 @@ https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql
                 match = clothing_type.name.downcase.scan(/#{query.downcase}/)
                 if (match.any?)
                   result << ("<i>" + query + "</i>").html_safe
+                  results_search.include?(clothing_type.name) ? nil:results_search << clothing_type.name
                   matches = true
                   found = true
                 end
@@ -33,6 +35,7 @@ https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql
                   match = brand.name.downcase.scan(/#{query.downcase}/)
                   if (match.any?)
                     result << ("<b>" + query + "</b>").html_safe
+                    results_search.include?(brand.name) ? nil:results_search << brand.name
                     matches = true
                     found = true
                   end
@@ -45,6 +48,8 @@ https://raw.githubusercontent.com/ronsuez/Rokk3rRoR/master/db/development.sql
 
          end
          @results = result
+         @results_search = results_search
+      end
     end
     
 ## Snapshots
