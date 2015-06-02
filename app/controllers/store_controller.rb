@@ -10,6 +10,7 @@ class StoreController < ApplicationController
      @query_strings = params[:q].scan(/\w+/)
 
      result = []
+     results_search = []
      clothing_types = ClothingType.all
      brands = Brand.all
 
@@ -22,6 +23,7 @@ class StoreController < ApplicationController
             match = clothing_type.name.downcase.scan(/#{query.downcase}/)
             if (match.any?)
               result << ("<i>" + query + "</i>").html_safe
+              results_search.include?(clothing_type.name) ? nil:results_search << clothing_type.name
               matches = true
               found = true
             end
@@ -34,6 +36,7 @@ class StoreController < ApplicationController
               match = brand.name.downcase.scan(/#{query.downcase}/)
               if (match.any?)
                 result << ("<b>" + query + "</b>").html_safe
+                results_search.include?(brand.name) ? nil:results_search << brand.name
                 matches = true
                 found = true
               end
@@ -46,5 +49,6 @@ class StoreController < ApplicationController
 
      end
      @results = result
+     @results_search = results_search
   end
 end

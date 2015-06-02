@@ -1,11 +1,20 @@
 <h3>Store#search</h3>
 <p>Search Term: <%= @query %></p>
 
-<h3>Listing Results</h3>
+<h3> Query Parsed</h3>
 
   <% @results.each do |result| %>
         <%= result %>
   <% end %>
+
+<h3>Results matched</h3>
+
+<ul>
+  <% @results_search.each do |result| %>
+      <li><%= result %></li>
+  <% end %>
+</ul>
+
 
 <br/>
 <br/>
